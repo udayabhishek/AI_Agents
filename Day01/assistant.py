@@ -16,26 +16,20 @@ print("=" *40)
 print("My AI Assistant")
 print("=" *40)
 
-messages = []
 while True:
     user_input = input("\nYou: ")
-
-    messages.append(
-        {
-            "role": "user", 
-            "content": user_input
-        }
-    )
-
-
     if user_input.lower() in ["exit", "quit"]:
-        
         print("Exiting the chat. Goodbye!")
         break   
 
     response = client.chat.completions.create(
-        model = os.getenv("MODEL"),
-        messages = messages
+        model=os.getenv("MODEL"),
+        messages=[
+            {
+                "role": "user", 
+                "content": user_input
+            }
+        ]
     )
 
     print("\nAI: ", response.choices[0].message.content)
