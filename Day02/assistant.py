@@ -16,7 +16,12 @@ print("=" *40)
 print("My AI Assistant")
 print("=" *40)
 
-messages = []
+messages = [ 
+    {
+        role": "system", 
+        "content": "You are a friendly AI teacher. Explain concepts in simple language with real-life examples."
+    }
+]
 
 while True:
     user_input = input("\nYou: ")
@@ -28,9 +33,7 @@ while True:
         }
     )
 
-
     if user_input.lower() in ["exit", "quit"]:
-        
         print("Exiting the chat. Goodbye!")
         break   
 
