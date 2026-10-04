@@ -1,0 +1,1 @@
+How do I fix this with interactive rebase? if I do the same procedure as with commit -m, I get an error that there is an unknown command on a line. I am trying to reword my commit message as it was "Test\nTest" instead of an actual newline character it literally read "\n".
