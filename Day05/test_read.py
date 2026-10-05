@@ -1,22 +1,10 @@
-def read_text(text_file):
-    try:
-        with open(text_file, 'r') as file:
-            return file.read()
-    except FileNotFoundError:
-        return f"Error: The file '{text_file}' was not found."
-    
+from tools import read_text
 
-print(read_text('data/text_file.txt'))
+text = read_text("data/notes.txt")
+
+print(text)
 
 
-def read_shopping(txt_file):
+text = read_text("data/shopping_list.txt")
+print(text)
 
-    try: 
-        with open(txt_file, 'r') as file:
-            content = file.read()
-            return content
-    except FileNotFoundError:
-        return f"Error: {txt_file} not found in the dir"
-
-    
-print(read_shopping("data/shopping_list.txt"))
